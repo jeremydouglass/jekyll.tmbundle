@@ -99,9 +99,37 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#yaml_front_matter</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>text.html.markdown</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>yaml_front_matter</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>\G---[ ]*$</string>
+					<key>end</key>
+					<string>^---[ ]*$</string>
+					<key>name</key>
+					<string>source.yaml.header.markdown.jekyll</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.yaml</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>
